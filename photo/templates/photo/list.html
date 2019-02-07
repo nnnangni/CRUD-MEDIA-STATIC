@@ -1,0 +1,9 @@
+{% extends "photo/base.html" %}
+{% block bb %}
+    <h1>여기는 인덱스</h1>
+    <hr>
+    {% for photo in photos %}
+        <h3>{{photo.title}}</h3>
+        <a href="{% url 'photos:detail' photo.id %}">글보기</a>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "photo/base.html" %}
+
+{% block bb %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{photo.title}}"/>
+        <input type="text" name="content" value="{{photo.content}}"/>
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}
